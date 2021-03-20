@@ -52,8 +52,36 @@ There is support for smaller screens as well as larger screens, with the main co
 
 ### Large Screen
 
-![largeScreen](https://imgur.com/o0vcowN)
+![largeScreen](https://imgur.com/o0vcowN.png)
 
 ### Small Screen
 
-![smallScreen](https://imgur.com/x65AsdX)
+![smallScreen](https://imgur.com/x65AsdX.png)
+
+## How to extend
+
+In order to extend the project, I will detail how the code works here. The main bulk of the index file comes from the CurrencyStack.js file inside components. This is what renders the rows of currencies, alongside their graphs and colorings. The header is rendered in Default.js under DefaultLayout inside layouts. The data comes from the calculator.js file inside the state folder, which essentially does all the hard work of fetching, caching and creating the correct for the index file. It can easily be extended by adding functions there and to the switch case.
+
+File Structure
+
+.
++-- _client
+|   +-- _public
+|   +-- _src
+|       +-- _components
+|           +-- _layouts (Default.js here!)
+|           +-- components (CurrencyStack.js here!)
+|       +-- _pages
+|           +-- _api
+|           +-- _state (calculator.js here!)
+|           +-- pages
+|       +-- _styles
++-- _server
+|   +-- _endpoints
+|       +-- info.js
+|       +-- status.js
+|   +-- _test
+|       +-- server.test.js
+|   +-- server.js
++-- .eslintrc.js
++-- package.json
