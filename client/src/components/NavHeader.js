@@ -1,7 +1,9 @@
 import React from 'react'
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Heading, Spacer } from '@chakra-ui/react'
+import BaseMenu from '../components/BaseMenu'
+import TimeframeMenu from '../components/TimeframeMenu'
 
-const NavHeader = () => (
+const NavHeader = ({ symbols, loadData }) => (
     <Box
         display="flex"
         flexDirection="row"
@@ -13,6 +15,18 @@ const NavHeader = () => (
         <Heading as="h1" size="lg" color="white" letterSpacing={'-.1rem'}>
           Rates Imperial
         </Heading>
+
+        <Spacer />
+
+        <BaseMenu
+          rows={symbols}
+          loadData={loadData}
+        />
+
+        <TimeframeMenu
+          loadData={loadData}
+        />
+
     </Box>
 )
 

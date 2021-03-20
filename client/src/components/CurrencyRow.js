@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Grid, Heading, Divider } from '@chakra-ui/react'
 import LineChart from './LineChart'
-import { theme, breakpoints } from '../styles/theme.js' // eslint-disable-line no-unused-vars
+import { theme } from '../styles/theme.js' // eslint-disable-line no-unused-vars
 
 const CurrencyRow = ({ symbol, price, indicator, change, graph }) => {
   // This adjusts the colour based on how the currency has valued

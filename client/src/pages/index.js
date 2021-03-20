@@ -8,17 +8,47 @@ import DefaultLayout from '../components/layouts/Default'
 import CurrencyStack from '../components/CurrencyStack'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home () {
+  const [base, setBase] = useState(DEFAULT_BASE) // eslint-disable-line no-unused-vars
+  const [timeframe, setTimeframe] = useState(7) // eslint-disable-line no-unused-vars
   const [rateData, setRateData] = useState([])
+  const [symbolList, setSymbolList] = useState([])
+
+  // This function automatically changes our state based on the incoming variable
+  // then updates the website accordingly
+  async function loadData (change = null) {
+    let data
+    if (change !== null) {
+      if (typeof change === 'number') {
+        setTimeframe(change)
+        data = await calculator(FETCH_DATA, base, change)
+      } else {
+        setBase(change)
+        data = await calculator(FETCH_DATA, change, timeframe)
+      }
+    } else {
+      data = await calculator(FETCH_DATA, base, timeframe)
+    }
+    // Set the rate data and symbol list
+    setRateData(data)
+    console.log(data)
+    const symbols = []
+    Object.keys(data).map((c) =>
+      symbols.push(c)
+    )
+    setSymbolList(symbols)
+  }
 
   // At the start, we want to display the rates in terms of EUR
-  useEffect(async () => {
-    let data = await calculator(FETCH_DATA, DEFAULT_BASE, 7)
-    setRateData(data)
+  useEffect(() => {
+    loadData()
   }, [])
 
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      symbols={symbolList}
+      loadData={loadData}
+    >
       <Box className={styles.container}>
         <Head>
           <title>Rates Imperial</title>
