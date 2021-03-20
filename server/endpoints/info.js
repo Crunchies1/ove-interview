@@ -20,7 +20,7 @@ module.exports = async function (req, res) {
     if (rateData[current] !== undefined) {
       price = rateData[current]
       // Return the calculated price to the user
-      res.status(201).send(price.toString())
+      res.status(201).send('Price: ' + price.toString())
     } else {
       // If current currency is invalid
       res.status(400).send('Current ' + current + ' is not supported.')
