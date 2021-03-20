@@ -9,14 +9,19 @@
     "test": "cd server && mocha test --recursive --exit"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.1.5",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "framer-motion": "^3.10.3",
     "mocha": "^8.3.2",
     "next": "10.0.9",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   }
 }
