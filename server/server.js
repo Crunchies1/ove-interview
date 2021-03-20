@@ -14,6 +14,14 @@ app.use(express.json())
 // Setup cors
 app.use(cors())
 
+// Import routes
+const getStatus = require('./endpoints/status')
+const getInfo = require('./endpoints/info')
+
+// Setup routes
+app.get('/api/status', getStatus)
+app.get('/api/info', getInfo)
+
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
