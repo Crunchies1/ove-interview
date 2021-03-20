@@ -64,24 +64,24 @@ In order to extend the project, I will detail how the code works here. The main 
 
 File Structure
 
-.
-+-- _client
-|   +-- _public
-|   +-- _src
-|       +-- _components
-|           +-- _layouts (Default.js here!)
-|           +-- components (CurrencyStack.js here!)
-|       +-- _pages
-|           +-- _api
-|           +-- _state (calculator.js here!)
-|           +-- pages
-|       +-- _styles
-+-- _server
-|   +-- _endpoints
-|       +-- info.js
-|       +-- status.js
-|   +-- _test
-|       +-- server.test.js
-|   +-- server.js
-+-- .eslintrc.js
+.\
++-- _client\
+|   +-- _public\
+|   +-- _src\
+|       +-- _components\
+|           +-- _layouts (Default.js here!)\
+|           +-- components (CurrencyStack.js here!)\
+|       +-- _pages\
+|           +-- _api\
+|           +-- _state (calculator.js here!)\
+|           +-- pages\
+|       +-- _styles\
++-- _server\
+|   +-- _endpoints\
+|       +-- info.js\
+|       +-- status.js\
+|   +-- _test\
+|       +-- server.test.js\
+|   +-- server.js\
++-- .eslintrc.js\
 +-- package.json
