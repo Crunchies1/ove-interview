@@ -1,34 +1,59 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# OVE Interview Part 1
+
+### Thoughts
+
+I enjoyed the project and wished that I could do more to extend the webservice's functionality. Ratesapi.io was simple to use and the open ended question meant I could play around more with the frontend and try and add my own extensions. 
+
 ## Getting Started
 
-First, run the development server:
+All you need to get the website up and running:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm run devserver
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Dependencies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Modules used to run the program: 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+@chakra-ui/react
+@emotion/react
+@emotion/styled
+axios
+chai
+chai-http
+chart.js
+concurrently
+cors
+eslint-plugin-react
+express
+framer-motion
+mocha
+next
+react
+react-chartjs-2
+react-dom
+react-router-dom
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Usage guide 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website should be intuitive to control, as there are only two buttons to click in order to interact with the website. These allow you to change the timeframe of the data and see how it changed with respect to longer timeframes. It also allows you the change the base symbol.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Other Features
 
-## Deploy on Vercel
+There is support for smaller screens as well as larger screens, with the main container shifting in size in order to accomodate different sized screens. An example is shown below. There are simple server tests implemented using mocha, simply run npm test to run these tests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Large Screen
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![largeScreen](https://imgur.com/o0vcowN)
+
+### Small Screen
+
+![smallScreen](https://imgur.com/x65AsdX)
