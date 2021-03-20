@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev client",
     "build": "next build",
     "start": "next start",
     "test": "cd server && mocha test --recursive --exit"
