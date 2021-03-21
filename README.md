@@ -48,6 +48,8 @@ The website should be intuitive to control, as there are only two buttons to cli
 
 ### API Calls
 
+Note that I have used localhost since I do not have an actual domain that I am hosting the server from, so I have assumed that you will be running it locally as well.
+
 Retrieve status of service.
 GET http://localhost:3001/api/status HTTP/2
 
