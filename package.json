@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev client",
-    "build": "next build",
+    "build": "next build client",
     "start": "next start",
     "test": "cd server && mocha test --recursive --exit",
     "devserver": "concurrently \"npm run server\" \"npm run dev\"",

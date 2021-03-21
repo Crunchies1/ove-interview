@@ -14,7 +14,7 @@ All you need to get the website up and running:
 npm run devserver
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The server is located at port 3001. 
 
 ### Dependencies
 
@@ -46,6 +46,14 @@ react-router-dom
 
 The website should be intuitive to control, as there are only two buttons to click in order to interact with the website. These allow you to change the timeframe of the data and see how it changed with respect to longer timeframes. It also allows you the change the base symbol.
 
+### API Calls
+
+Retrieve status of service.
+GET http://localhost:3001/api/status HTTP/2
+
+Retrieve price of current with respect to base.
+GET http://localhost:3001/api/info?base=EUR&current=AUD HTTP/2
+
 ### Other Features
 
 There is support for smaller screens as well as larger screens, with the main container shifting in size in order to accomodate different sized screens. An example is shown below. There are simple server tests implemented using mocha, simply run npm test to run these tests.
@@ -66,22 +74,22 @@ File Structure
 
 .\
 +-- _client\
-|   +-- _public\
-|   +-- _src\
-|       +-- _components\
-|           +-- _layouts (Default.js here!)\
-|           +-- components (CurrencyStack.js here!)\
-|       +-- _pages\
-|           +-- _api\
-|           +-- _state (calculator.js here!)\
-|           +-- pages\
-|       +-- _styles\
+|   +-- _public\
+|   +-- _src\
+|       +-- _components\
+|           +-- _layouts (Default.js here!)\
+|           +-- components (CurrencyStack.js here!)\
+|       +-- _pages\
+|           +-- _api\
+|           +-- pages\
+|       +-- _styles\
+|       +-- _state (calculator.js here!)\
 +-- _server\
-|   +-- _endpoints\
-|       +-- info.js\
-|       +-- status.js\
-|   +-- _test\
-|       +-- server.test.js\
-|   +-- server.js\
+|   +-- _endpoints\
+|       +-- info.js\
+|       +-- status.js\
+|   +-- _test\
+|       +-- server.test.js\
+|   +-- server.js\
 +-- .eslintrc.js\
 +-- package.json
