@@ -10,6 +10,9 @@ I enjoyed the project and wished that I could do more to extend the webservice's
 
 All you need to get the website up and running:
 
+*You need node.js installed on your local machine.* 
+
+Clone the repository, the cd into it. After that run the following two lines.
 ```bash
 npm install
 npm run devserver
@@ -59,7 +62,7 @@ GET http://localhost:3001/api/info?base=EUR&current=AUD HTTP/2
 
 ### Other Features
 
-There is support for smaller screens as well as larger screens, with the main container shifting in size in order to accomodate different sized screens. An example is shown below. There are simple server tests implemented using mocha, simply run npm test to run these tests.
+There is support for smaller screens as well as larger screens, with the main container shifting in size in order to accomodate different sized screens. An example is shown below. There are simple server tests implemented using mocha, simply run npm test at the root folder to run these tests.
 
 ### Large Screen
 
