@@ -1,3 +1,5 @@
+## Part 2
+
 The file at question (control/images.js) contains 3 top level functions. 
 
 The reason I explain them in the order I did is because the first function is called in the second, and the second in the third. So I felt like explaining them in this order would make it easier to understand.
