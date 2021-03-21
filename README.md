@@ -11,6 +11,7 @@ I enjoyed the project and wished that I could do more to extend the webservice's
 All you need to get the website up and running:
 
 ```bash
+npm install
 npm run devserver
 ```
 
